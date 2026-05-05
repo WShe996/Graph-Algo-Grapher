@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graph Algorithm Visualizer</title>
+
+    <!-- Your stylesheet link (this is the important part) -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <style>
+        /* Minimal fallback styling in case your stylesheet is empty */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #controls {
+            margin-bottom: 15px;
+        }
+
+        #controls > * {
+            margin-right: 10px;
+        }
+
+        #graph-canvas {
+            border: 1px solid #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Graph Algorithm Visualizer</h1>
+
+    <div id="controls">
+        <label>Algorithm:</label>
+        <select id="algorithm">
+            <option value="bfs">BFS</option>
+            <option value="dfs">DFS</option>
+            <option value="dijkstra">Dijkstra</option>
+            <option value="astar">A*</option>
+            <option value="flow">Max Flow</option>
+        </select>
+
+        <input id="start-node" placeholder="Start node">
+        <input id="goal-node" placeholder="Goal node (optional)">
+
+        <button id="run-steps">Run (step-by-step)</button>
+
+        <button id="step-back">◀ Step Back</button>
+        <button id="step-forward">Step Forward ▶</button>
+        <button id="play">▶ Play</button>
+        <button id="pause">⏸ Pause</button>
+    </div>
+
+    <canvas id="graph-canvas" width="900" height="600"></canvas>
+
+    <!-- Scripts MUST be at the bottom so DOM exists before JS runs -->
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/graph.js"></script>
+
+</body>
+</html>

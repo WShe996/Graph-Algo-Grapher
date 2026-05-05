@@ -1,0 +1,42 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+
+# Virtual environment
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# --- Flask / Runtime ---
+instance/
+*.db
+*.sqlite3
+
+# --- Logs ---
+*.log
+
+# --- OS / Editor Files ---
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# --- Node / Frontend (if added later) ---
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# --- Cache ---
+.cache/
