@@ -250,17 +250,18 @@ graph = {
     nodes: [
         { id: "A", x: 200, y: 200 },
         { id: "B", x: 400, y: 200 },
-        { id: "C", x: 300, y: 350 },
-        { id: "D", x: 500, y: 500 }
+        { id: "C", x: 200, y: 400 },
+        { id: "D", x: 400, y: 400 },
+        { id: "E", x: 600, y: 300 }
     ],
     edges: [
         { from: "A", to: "B", weight: 1 },
-        { from: "A", to: "C", weight: 2 },
-        { from: "B", to: "C", weight: 3 },
-        { from: "C", to: "D", weight: 2 },
-        { from: "B", to: "D", weight: 3 }
+        { from: "A", to: "C", weight: 1 },
+        { from: "B", to: "D", weight: 1 },
+        { from: "C", to: "E", weight: 1 }
     ]
 };
+
 
 drawGraph();
 
