@@ -74,5 +74,5 @@ graph-visualizer/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourname/graph-visualizer.git
+git clone https://github.com/WShe996/Graph-Algo-Grapher.git
 cd graph-visualizer
