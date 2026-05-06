@@ -42,9 +42,13 @@ This project is designed to be simple, hackable, and educational — perfect for
 
 ## 📁 Project Structure
 
+---
+
+<pre>
 graph-visualizer/
 │
 ├── app.py
+│
 ├── algorithms/
 │   ├── bfs.py
 │   ├── dfs.py
@@ -56,11 +60,13 @@ graph-visualizer/
 │   └── index.html
 │
 └── static/
-├── js/
-│   ├── api.js
-│   └── graph.js
-└── css/
-└── styles.css
+    ├── js/
+    │   ├── api.js
+    │   └── graph.js
+    │
+    └── css/
+        └── styles.css
+</pre>
 
 ---
 
