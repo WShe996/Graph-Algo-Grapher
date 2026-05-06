@@ -248,19 +248,44 @@ runStepsBtn.addEventListener("click", async () => {
 // ------------------------------------------------------------
 graph = {
     nodes: [
-        { id: "A", x: 200, y: 200 },
-        { id: "B", x: 400, y: 200 },
-        { id: "C", x: 200, y: 400 },
-        { id: "D", x: 400, y: 400 },
-        { id: "E", x: 600, y: 300 }
+        { id: "A", x: 150, y: 150 },
+        { id: "B", x: 350, y: 100 },
+        { id: "C", x: 350, y: 250 },
+        { id: "D", x: 550, y: 150 },
+        { id: "E", x: 550, y: 300 },
+        { id: "F", x: 750, y: 200 },
+        { id: "G", x: 800, y: 150 }
     ],
+
     edges: [
-        { from: "A", to: "B", weight: 1 },
-        { from: "A", to: "C", weight: 1 },
-        { from: "B", to: "D", weight: 1 },
-        { from: "C", to: "E", weight: 1 }
+        // A branching start
+        { from: "A", to: "B", weight: 4 },
+        { from: "A", to: "C", weight: 2 },
+
+        // B branch
+        { from: "B", to: "D", weight: 7 },
+        { from: "B", to: "C", weight: 1 },   // cheap back-edge
+
+        // C branch
+        { from: "C", to: "D", weight: 3 },
+        { from: "C", to: "E", weight: 10 },  // misleading expensive path
+
+        // D branch
+        { from: "D", to: "E", weight: 2 },
+        { from: "D", to: "F", weight: 8 },
+
+        // E branch
+        { from: "E", to: "F", weight: 2 },
+
+        // F to goal
+        { from: "F", to: "G", weight: 1 },
+
+        // A cycle to test correctness
+        { from: "E", to: "B", weight: 6 }
     ]
 };
+
+
 
 
 drawGraph();
